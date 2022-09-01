@@ -20,11 +20,12 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - fps <1
-    - fps-auth <1
+    - fps >=0.0.8,<1
     - fps-lab <1
+    - fps-yjs <1
     - pyzmq >=22,<23
     - websockets >=10,<11
+    - python-dateutil >=2,<3
 
 test:
   imports:
