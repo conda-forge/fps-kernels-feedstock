@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.7
     - fps >=0.0.8,<1
-    - fps-lab >=0.0.37,<1
+    - fps-frontend <1
     - fps-yjs >=0.0.37,<1
     - pyzmq >=22,<23
     - websockets >=10,<11
