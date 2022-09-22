@@ -1,5 +1,5 @@
 {% set name = "fps-kernels" %}
-{% set version = "0.0.41" %}
+{% set version = "0.0.42" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fps_kernels-{{ version }}.tar.gz
-  sha256: d8e55e3c0676a3702df49f4d5216df32b0faefeee9ad2dbdd9e84ba88e7aeeb4
+  sha256: 1987e0bbe5b28623b7815b49cef85dbac8746055eeb08400c0fa44135b7a3c15
 
 build:
   noarch: python
@@ -22,6 +22,7 @@ requirements:
   run:
     - python >=3.7
     - fps >=0.0.8,<1
+    - fps-auth-base <1
     - fps-frontend <1
     - fps-yjs >=0.0.37,<1
     - pyzmq >=22,<23
