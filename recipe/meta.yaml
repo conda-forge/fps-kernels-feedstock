@@ -21,13 +21,10 @@ requirements:
     - hatchling
   run:
     - python >=3.8
-    - fps >=0.0.8,<1
-    - fps-auth-base <1
-    - fps-frontend <1
-    - fps-yjs >=0.0.37,<1
-    - pyzmq >=22,<23
-    - websockets >=10,<11
-    - python-dateutil >=2,<3
+    - jupyverse-api >=0.1.2,<1
+    - pyzmq
+    - websockets
+    - python-dateutil
 
 test:
   imports:
@@ -36,7 +33,7 @@ test:
 about:
   home: https://github.com/jupyter-server/jupyverse/tree/main/plugins/kernels
   summary: An FPS plugin for the kernels API
-  keywords: jupyter, server, fastapi, pluggy, plugins
+  keywords: jupyter, server, fastapi, plugins
   dev_url: https://github.com/jupyter-server/jupyverse/tree/main/plugins/kernels
   license_file: COPYING.md
   license: BSD-3-Clause
