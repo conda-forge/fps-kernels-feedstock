@@ -1,11 +1,11 @@
-About fps-kernels
-=================
+About fps-kernels-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fps-kernels-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/jupyter-server/jupyverse/tree/main/plugins/kernels
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fps-kernels-feedstock/blob/main/LICENSE.txt)
 
 Summary: An FPS plugin for the kernels API
 
