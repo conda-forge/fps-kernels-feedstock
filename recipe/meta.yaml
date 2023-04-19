@@ -21,10 +21,11 @@ requirements:
     - hatchling
   run:
     - python >=3.8
-    - jupyverse-api >=0.1.2,<1
+    - jupyverse-api >=0.1.4,<1
     - pyzmq
     - websockets
     - python-dateutil
+    - watchfiles >=0.16.1,<1
 
 test:
   imports:
