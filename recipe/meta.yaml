@@ -1,5 +1,5 @@
 {% set name = "fps-kernels" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fps_kernels-{{ version }}.tar.gz
-  sha256: 90479f0057b8a05453030bb6a3d1f3a850263919a92f260f8dfacf299addcb97
+  sha256: 0851adcbadf3bff63d9013c79836ead29c06873cab6c75c12696af544e58ec67
 
 build:
   noarch: python
