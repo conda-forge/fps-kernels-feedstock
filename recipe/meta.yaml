@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fps_kernels-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fps_kernels-{{ version }}.tar.gz
   sha256: cef8902cf6bbc470d6989162eb52e759cb70b787fd755ff2a1c7ea15b11edd8c
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - hatchling
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - jupyverse-api >=0.1.4,<1
     - pyzmq
     - websockets
@@ -28,6 +28,8 @@ requirements:
     - watchfiles >=0.16.1,<1
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - fps_kernels
 
