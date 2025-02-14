@@ -21,11 +21,14 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - jupyverse-api >=0.1.4,<1
+    - jupyverse-api >=0.7.0,<1
     - pyzmq
     - websockets
     - python-dateutil
-    - watchfiles >=0.16.1,<1
+    - types-python-dateutil
+    - watchfiles >=1.0.4,<2
+    - pycrdt >=0.10.3,<0.13.0
+    - anyio
 
 test:
   requires:
