@@ -1,5 +1,5 @@
 {% set name = "fps-kernels" %}
-{% set version = "0.7.4" %}
+{% set version = "0.7.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fps_kernels-{{ version }}.tar.gz
-  sha256: dbbe1ac61fccfa6d832a346285972b6be1bcf08a91d236fc40d80863818a7983
+  sha256: 5635db48d2e09eed9d5c5c064330ffb2c31fbe7d9f7735896b30b68d6ae90f0e
 
 build:
   noarch: python
@@ -23,6 +23,7 @@ requirements:
     - python >={{ python_min }}
     - jupyverse-api >=0.7.0,<1
     - pyzmq
+    - zmq-anyio >=0.3.1,<0.4.0
     - websockets
     - python-dateutil
     - types-python-dateutil
