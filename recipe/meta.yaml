@@ -23,6 +23,7 @@ requirements:
     - python >={{ python_min }}
     - jupyverse-api >=0.7.0,<1
     - pyzmq
+    - zmq-anyio >=0.3.1,<0.4.0
     - websockets
     - python-dateutil
     - types-python-dateutil
