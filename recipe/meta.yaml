@@ -21,7 +21,7 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - jupyverse-api >=0.11.2,<0.12.0
+    - jupyverse-api >=0.11.3,<0.12.0
     - python-dateutil
     - types-python-dateutil
     - pycrdt >=0.10.3,<0.13.0
