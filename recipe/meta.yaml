@@ -1,5 +1,5 @@
 {% set name = "fps-kernels" %}
-{% set version = "0.10.3" %}
+{% set version = "0.10.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fps_kernels-{{ version }}.tar.gz
-  sha256: a0169f199822416ae937ec1e636596d6d9409507be4e9144d740631d5ae7d092
+  sha256: 412a0e11c6f30bbe2c14cdcb491ac72ce495d2e131db58d716c2fdf57906fc0d
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - jupyverse-api >=0.11.3,<0.12.0
+    - jupyverse-api >=0.12.0,<0.13.0
     - python-dateutil
     - types-python-dateutil
     - pycrdt >=0.10.3,<0.13.0
@@ -30,6 +30,9 @@ requirements:
 test:
   requires:
     - python {{ python_min }}
+    - pip
+  commands:
+    - pip check
   imports:
     - fps_kernels
 
