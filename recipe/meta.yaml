@@ -21,7 +21,7 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - jupyverse-api >=0.11.3,<0.12.0
+    - jupyverse-api >=0.12.0,<0.13.0
     - python-dateutil
     - types-python-dateutil
     - pycrdt >=0.10.3,<0.13.0
@@ -30,6 +30,9 @@ requirements:
 test:
   requires:
     - python {{ python_min }}
+    - pip
+  commands:
+    - pip check
   imports:
     - fps_kernels
 
