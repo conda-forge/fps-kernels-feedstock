@@ -1,0 +1,46 @@
+schema_version: 1
+
+context:
+  name: fps-kernels
+  version: 0.10.11
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/fps_kernels-${{ version }}.tar.gz
+  sha256: f53bea3693bd5e8dc768ec5f77adec6294b8053718e77bdca7595ab5edb99379
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+
+requirements:
+  host:
+    - python ${{ python_min }}
+    - pip
+    - uv-build
+  run:
+    - python >=${{ python_min }}
+    - jupyverse-api >=0.14.1,<0.15.0
+    - python-dateutil
+    - types-python-dateutil
+
+tests:
+  - python:
+      imports: fps_kernels
+      pip_check: true
+      python_version: ${{ python_min }}.*
+
+about:
+  summary: An FPS plugin for the kernels API.
+  license_file: COPYING.md
+  license: BSD-3-Clause
+  homepage: https://github.com/jupyter-server/jupyverse/tree/main/plugins/kernels
+  repository: https://github.com/jupyter-server/jupyverse/tree/main/plugins/kernels
+
+extra:
+  recipe-maintainers:
+    - davidbrochart
