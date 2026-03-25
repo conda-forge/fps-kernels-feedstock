@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.10.11"
+  version: "0.11.2"
 
 package:
   name: fps-kernels
@@ -9,7 +9,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/f/fps-kernels/fps_kernels-${{ version }}.tar.gz
-    sha256: f53bea3693bd5e8dc768ec5f77adec6294b8053718e77bdca7595ab5edb99379
+    sha256: fcf1c4401bd154e269777390aece5f9821854b1664ceb731ca3c6f9a2a561eb3
 
 build:
   noarch: python
