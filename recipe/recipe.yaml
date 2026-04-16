@@ -24,8 +24,21 @@ requirements:
     - uv-build
   run:
     - python >=${{ python_min }}
-    - jupyverse-api >=0.14.1,<0.15.0
+    - anyio
+    - fastapi-core
+    - fps
+    - jupyverse-api >=0.15.0,<0.16.0
+    - jupyverse-auth >=0.2.0,<0.3.0
+    - jupyverse-file-watcher >=0.1.0,<0.2.0
+    - jupyverse-frontend >=0.1.0,<0.2.0
+    - jupyverse-kernel >=0.1.0,<0.2.0
+    - jupyverse-kernels >=0.1.0,<0.2.0
+    - jupyverse-yjs >=0.1.1,<0.2.0
+    - packaging
+    - pycrdt
     - python-dateutil
+    - starlette
+    - structlog
     - types-python-dateutil
 
 tests:
