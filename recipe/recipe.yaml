@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.11.4"
+  version: "0.11.5"
 
 package:
   name: fps-kernels
@@ -9,7 +9,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/f/fps-kernels/fps_kernels-${{ version }}.tar.gz
-    sha256: 785671231baeda72dd08f88b03f4c09704da76935d4e7e900840643f02a432e0
+    sha256: 78740b4ce416d61b4ab7a9c0568712787841272822a4ba2cdb985fd8bfbb02b4
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - uv-build
+    - uv-build >=0.11.32,<0.12
   run:
     - python >=${{ python_min }}
     - anyio
@@ -45,7 +45,9 @@ tests:
   - python:
       imports: fps_kernels
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   license: BSD-3-Clause
